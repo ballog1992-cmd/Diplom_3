@@ -12,9 +12,6 @@ __pycache__/
 .pytest_cache/
 .python-version
 
-# Отчеты Allure (результаты запусков)
-allure-results/
-
 # Логи и системные файлы
 *.log
 .DS_Store
