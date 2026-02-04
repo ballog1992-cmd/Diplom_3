@@ -16,7 +16,7 @@
 ### Структура проекта
 
 - `methods/` — базовые и специфичные Page Object методы (BasePage, IngPageMethods и др.).
-- `locators/` — файлы с локаторами элементов (CSS_SELECTOR, XPATH).
+- `locators` — файлы с локаторами элементов (CSS_SELECTOR, XPATH).
 - `tests/` — пакет с тестами, разделенными по функциональным блокам.
 - `conftest.py` — конфигурация pytest, фикстуры драйвера и авторизации.
 - `data.py` / `helper.py` — генерация фейковых данных (Faker) и константы.

@@ -16,10 +16,8 @@ class BasePageMethods:
         element = WebDriverWait(self.driver, 10).until(
             EC.element_to_be_clickable(locator)
         )
-        try:
-            element.click()
-        except ElementClickInterceptedException:
-            self.click_with_js(locator)
+        
+        element.click()
 
     @allure.step("Дождаться видимости элемента {locator}")
     def wait_for_element_visibility(self, locator):

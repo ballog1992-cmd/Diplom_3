@@ -25,7 +25,7 @@ class TestBaseFunctionally:
         main_page = IngPageMethods(driver)
         
         main_page.go_to_order_feed()
-        main_page.constructor_page
+        main_page.constructor_page()
         
         assert Url.main_site in driver.current_url
 
@@ -48,7 +48,7 @@ class TestBaseFunctionally:
 
         target_ingredient = main_page.add_ingredient_to_order_by_index(ingr_id)
         main_page.open_ingredient_details(target_ingredient)
-        main_page.click_to_element(Locators.CLOSE_BUTTON)
+        main_page.click_with_js(Locators.CLOSE_BUTTON)
 
         assert Url.main_site in driver.current_url
 
@@ -89,7 +89,7 @@ class TestBaseFunctionally:
         
         page.click_to_element(Locators.ORDER_BUTTON)
         order_number = page.get_order_number_from_modal()
-        page.click_to_element(Locators.CLOSE_BUTTON)
+        page.click_with_js(Locators.CLOSE_BUTTON)
         page.go_to_order_feed()
         
         history_order = page.get_first_order_text_from_history()
